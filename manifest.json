@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+
+	"name": "YoutubeUploadsPlayButton",
+	"description": "Small Chrome extension to add a 'Play all' button to the uploads tab.",
+	"version": "1.0",
+
+	"permissions": [
+		"https://www.youtube.com/user/*/videos"
+	],
+	"content_scripts": [
+		{
+			"matches": ["https://www.youtube.com/user/*/videos*"],
+			"js": ["jquery-3.1.1.min.js", "jquery-regex.js", "ytUploadsPlayButton.js"],
+			"run_at": "document_end"
+		}
+	]
+}
